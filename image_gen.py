@@ -53,7 +53,7 @@ def gen_noise(num, z_dim):
 
 
 def generate_image():
-    checkpoint = torch.load(f"G-latest.pkl")
+    checkpoint = torch.load(f"G-latest.pkl", map_location=torch.device('cpu'))
     gen = Generator(200)
     gen.load_state_dict(checkpoint['model_state_dict'])
 
