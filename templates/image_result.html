@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/main.css">
+</head>
+<body>
+<h2>Imagenet Generator</h2>
+<p>Hit the button again for a new image</p>
+<img src="{{ url_for('static', filename='images/result.png') }}"  class="image"/>
+<br />
+    <button onclick="window.location.href='{{url_for('image_result')}}';">
+      Generate New Image
+    </button>
+</body>
+</html>
