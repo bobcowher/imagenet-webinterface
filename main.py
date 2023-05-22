@@ -26,4 +26,4 @@ class ImageResult(MethodView):
 app.add_url_rule('/', view_func=HomePage.as_view('home_page'))
 app.add_url_rule('/image_result', view_func=ImageResult.as_view('image_result'))
 
-app.run(debug=True)
+app.run(host='0.0.0.0', debug=True, port=8080)
